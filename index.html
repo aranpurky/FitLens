@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLens</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="slideshow">
+        <!-- Intro Page -->
+        <div class="page" id="intro">
+            <div class="page-content">
+                <h1>Welcome to FitLens</h1>
+                <p>FitLens is your personal virtual fitness trainer, guiding you through workouts with real-time pose detection.</p>
+                <button onclick="navigateTo('about')">Learn More</button>
+            </div>
+        </div>
+        
+        <!-- About Page -->
+        <div class="page" id="about">
+            <div class="page-content">
+                <h2>About FitLens</h2>
+                <p>FitLens uses TensorFlow.js for pose detection to ensure you perform exercises correctly. Track your progress and improve your fitness with our guided workouts.</p>
+                <button onclick="navigateTo('workout1')">Start Workout</button>
+            </div>
+        </div>
+        
+        <!-- Workout Pages -->
+        <div class="page" id="workout1">
+            <div class="page-content">
+                <h2>Push-Ups</h2>
+                <video id="video1" autoplay playsinline></video>
+                <button onclick="startExercise('pushups')">Start Push-Ups</button>
+                <button onclick="navigateTo('workout2')">Next Workout</button>
+            </div>
+        </div>
+        
+        <div class="page" id="workout2">
+            <div class="page-content">
+                <h2>Squats</h2>
+                <video id="video2" autoplay playsinline></video>
+                <button onclick="startExercise('squats')">Start Squats</button>
+                <button onclick="navigateTo('workout3')">Next Workout</button>
+            </div>
+        </div>
+        
+        <div class="page" id="workout3">
+            <div class="page-content">
+                <h2>Jumping Jacks</h2>
+                <video id="video3" autoplay playsinline></video>
+                <button onclick="startExercise('jumpingJacks')">Start Jumping Jacks</button>
+                <button onclick="navigateTo('workout4')">Next Workout</button>
+            </div>
+        </div>
+        
+        <div class="page" id="workout4">
+            <div class="page-content">
+                <h2>Plank</h2>
+                <video id="video4" autoplay playsinline></video>
+                <button onclick="startExercise('plank')">Start Plank</button>
+                <button onclick="navigateTo('summary')">Finish Workout</button>
+            </div>
+        </div>
+        
+        <!-- Summary Page -->
+        <div class="page" id="summary">
+            <div class="page-content">
+                <h2>Summary</h2>
+                <p>Push-Ups: <span id="pushupsScore">0</span>/25</p>
+                <p>Squats: <span id="squatsScore">0</span>/25</p>
+                <p>Jumping Jacks: <span id="jumpingJacksScore">0</span>/25</p>
+                <p>Plank: <span id="plankScore">0</span>/25</p>
+                <h3>Total Score: <span id="totalScore">0</span>/100</h3>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
